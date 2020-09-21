@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Canvas</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Aluwani Baloyi">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+        <!--css-->
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="javascript/vendor/jquery.slim.min.js"></script>
+        <script src="javascript/bootstrap.bundle.min.js"></script>
+        <script src="javascript/bootstrap.js"></script>
+
+
+
+    </head>
+
+    <body class="slide_list">
+        <section id="topbar" class="d-none d-lg-block">
+            <div class="container clearfix">
+                <div class="info float-left">
+                    <a class="divider" href="#">HOME</a>
+                    <a class="divider"  href="#">FAQS</a>
+                    <a class="divider"  href="#">CONTACTS</a>
+                    <select  class=" select">
+                        <option style="color: #000000" value="2">USD</option>
+                        <option style="color: #000000" value="1">ZAR</option>
+                        <option style="color: #000000" value="3">EURO</option>
+                    </select>
+                </div>
+                <div class="social-links float-right">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-phone"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-transparent mb-4">
+            <a class="navbar-brand" href="#">canvas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-home"></i>
+                            HOME
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-plane"></i>
+                            FLIGHTS
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-building-o"></i>
+                            HOTELS
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-gift"></i>
+                            HOLIDAYS
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-pencil"></i>
+
+                            BLOG
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-phone"></i>
+                            1800 105 2541
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <div class="tabbed">
+                <input type="radio" name="tabs" id="tab-nav-1" checked>
+                <label class="divider" for="tab-nav-1"><i class="fa fa-plane"></i> Flights</label>
+                <input type="radio" name="tabs" id="tab-nav-2">
+                <label class="divider" for="tab-nav-2"><i class="fa fa-building-o"></i> Hotels</label>
+                <input type="radio" name="tabs" id="tab-nav-3">
+                <label class="divider" for="tab-nav-3">Flights + Hotels <span class="span"> save </span></label>
+                <input type="radio" name="tabs" id="tab-nav-4">
+                <label  for="tab-nav-4"><i class="fa fa-gift"></i> Holidays</label>
+                <div class="tabs">
+                    <div>
+                        <div class="header">
+                            <div class="body-band float-left">BOOK YOUR FLIGHTS</div>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-light active float-right">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Domestic
+                                </label>
+                                <label class="btn btn-light">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> International
+                                </label>
+                            </div>
+                        </div>
+
+                        <form class="needs-validation">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="placeOfDepature">FROM</label>
+                                    <input type="text" class="form-control" id="placeOfDepature" placeholder="Eg. Melbourne,Austraia" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid place of departure is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="destination">TO</label>
+                                    <input type="text" class="form-control" id="destination" placeholder="Eg. New York,United States" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid destination is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5 mb-3">
+                                    <label for="departure">DEPARTURE</label>
+                                    <input placeholder="yyyy/mm/dd" class="form-control" type="text" onfocus="(this.type='date')" id="departure" required>
+                                    <div class="invalid-feedback">
+                                        Please select a valid departure date.
+                                    </div>
+                                </div>
+                                <div class="col-md-5 mb-3">
+                                    <label for="returnDate">RETURN</label>
+                                    <input placeholder="yyyy/mm/dd" class="form-control" type="text" onfocus="(this.type='date')" id="returnDate" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid return date.
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="adults">ADULTS</label>
+                                    <input type="number" class="form-control" id="adults" placeholder="2" required>
+                                    <div class="invalid-feedback">
+                                        Number of adults not valid.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer">
+                                <div class="footer-buttom float-left">
+                                    <button type="submit" class="btn-sm btn-danger">
+                                        SEARCH FLIGHTS
+                                    </button>
+                                </div>
+
+                                <div class="float-left">
+                                    <button class="box advanced_search">
+                                        Advanced Search
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                    <div><h2>Hotels</h2>
+                    </div>
+                    <div>
+                        <h2>Flights + Hotels</h2>
+                    </div>
+                    <div>
+                        <h2>Holidays</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+
+</html>
